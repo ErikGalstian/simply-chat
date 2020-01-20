@@ -1,0 +1,372 @@
+:root {
+  --pink: #ff97bd;
+  --white: #fefeff;
+  --blue-violet: #4d46b5;
+  --perfume: #c2b5f7;
+  --chetwode-blue: #9087e2;
+  --prelude: #dccded;
+  --fedora: #70656d;
+  --rose: #e0b1ab;
+}
+
+@keyframes hovereffect {
+  0% {
+    background-color: var(--blue-violet);
+    border-radius: 0px;
+  }
+  100% {
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+}
+
+body {
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  font-family: Lato;
+}
+
+.container {
+  height: 100vh;
+  margin: 100px;
+  display: flex;
+  width: 1400px;
+}
+
+.user-list {
+  width: 38.2%;
+  height: 80vh;
+  background-color: var(--blue-violet);
+  padding: 40px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.user-list-contacts {
+  overflow: auto;
+  height: 64vh;
+}
+
+.chat-messages {
+  overflow: auto;
+  height: 64vh;
+  font-size: 12px;
+}
+
+.chat-users {
+  color: var(--blue-violet);
+}
+
+.chat-box {
+  width: 61.8%;
+  height: 80vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.chat-user-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  color: var(--blue-violet);
+}
+
+.message-data-left {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.message-data-right {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  justify-content: flex-end;
+}
+
+.conversation-users {
+  display: flex;
+}
+
+hr {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: none;
+  background-color: var(--prelude);
+  height: 2px;
+}
+
+.speech-bubble-left {
+  color: var(--white);
+  position: relative;
+  background: var(--chetwode-blue);
+  border-radius: 16px;
+  max-width: 360px;
+  padding: 20px;
+  display: inline-block;
+}
+
+.speech-bubble-left:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 35%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: var(--chetwode-blue);
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.speech-bubble-right {
+  color: var(--blue-violet);
+  position: relative;
+  background: var(--prelude);
+  border-radius: 16px;
+  max-width: 360px;
+  padding: 20px;
+  display: inline-block;
+}
+
+.speech-bubble-right:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 35%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: var(--prelude);
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-right: -20px;
+}
+
+.message-data-right > img {
+  align-self: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.message-data-left > img {
+  align-self: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.chat-footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--chetwode-blue);
+}
+
+.chat-icon-large {
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.chat-icon-medium {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.chat-icon-small {
+  height: 24px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.chat-user-icons > button > i {
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px var(--chetwode-blue);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.user-info {
+  display: flex;
+  height: 40px;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  padding-left: 10px;
+}
+
+h4,
+h6 {
+  line-height: 1px;
+  padding-left: 20px;
+}
+
+h4 {
+  color: var(--white);
+}
+
+h6 {
+  color: var(--perfume);
+}
+
+.user-info-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.new-conversation {
+  color: var(--perfume);
+  padding-bottom: 30px;
+}
+
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  color: var(--white);
+}
+
+.icons {
+  width: 100px;
+  display: flex;
+  color: var(--white);
+  justify-content: space-between;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.send {
+  color: var(--pink);
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scrollbar-2::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+.scrollbar-2::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--white);
+}
+
+.scrollbar-2::-webkit-scrollbar-thumb {
+  background-color: var(--perfume);
+}
+
+.user-info:hover h4 {
+  color: var(--blue-violet);
+}
+
+.user-info:hover h6 {
+  color: var(--chetwode-blue);
+}
+
+.user-info:hover {
+  animation-name: hovereffect;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 667px) {
+  .user-list-contacts {
+    display: none;
+  }
+  .new-conversation {
+    display: none;
+  }
+  .user-list-header {
+    flex-direction: column;
+  }
+  .icons {
+    flex-direction: column;
+    padding-top: 20px;
+    width: 20px;
+  }
+  .icons > button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .user-list {
+    width: 20px;
+    padding: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .chat-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .user-list-contacts {
+    display: none;
+  }
+  .new-conversation {
+    display: none;
+  }
+  .user-list-header {
+    flex-direction: column;
+  }
+  .icons {
+    flex-direction: column;
+    padding-top: 20px;
+    width: 20px;
+  }
+  .icons > button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .user-list {
+    width: 20px;
+    padding: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .chat-box {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1092px) {
+  .user-info-inner {
+    flex-wrap: wrap;
+  }
+  .user-info-inner > h4 {
+    padding-left: 0px;
+  }
+}
