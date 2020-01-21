@@ -1,3 +1,4 @@
+/*----------COLORS----------*/
 :root {
   --pink: #ff97bd;
   --white: #fefeff;
@@ -9,6 +10,7 @@
   --rose: #e0b1ab;
 }
 
+/*----------EFFECTS----------*/
 @keyframes hovereffect {
   0% {
     background-color: var(--blue-violet);
@@ -20,6 +22,7 @@
   }
 }
 
+/*----------STYLES----------*/
 body {
   background-color: var(--pink);
   display: flex;
@@ -97,13 +100,13 @@ body {
   display: flex;
 }
 
-hr {
+input {
   width: 100%;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border: none;
-  background-color: var(--prelude);
-  height: 2px;
+  border-top: 2px solid var(--prelude);
+  height: 30px;
 }
 
 .speech-bubble-left {
@@ -265,8 +268,36 @@ button {
   color: var(--pink);
 }
 
+.user-info:hover h4 {
+  color: var(--blue-violet);
+}
+
+.user-info:hover h6 {
+  color: var(--chetwode-blue);
+}
+
+.user-info:hover {
+  animation-name: hovereffect;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.mobile-button {
+  display: none;
+}
+
+/*----------SCROLL----------*/
+.scrollbar::-webkit-scrollbar-track {
+  background-color: var(--blue-violet);
+}
+
 .scrollbar::-webkit-scrollbar {
-  width: 0px;
+  width: 4px;
+  background-color: var(--white);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--perfume);
 }
 
 .scrollbar-2::-webkit-scrollbar-track {
@@ -282,20 +313,7 @@ button {
   background-color: var(--perfume);
 }
 
-.user-info:hover h4 {
-  color: var(--blue-violet);
-}
-
-.user-info:hover h6 {
-  color: var(--chetwode-blue);
-}
-
-.user-info:hover {
-  animation-name: hovereffect;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
+/*----------MEDIA QUERIES----------*/
 @media (max-width: 667px) {
   .user-list-contacts {
     display: none;
@@ -333,6 +351,20 @@ button {
   .user-list-contacts {
     display: none;
   }
+
+  .container {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .chat-box {
+    width: 100%;
+  }
+
+  .mobile-button {
+    display: initial;
+  }
+
   .new-conversation {
     display: none;
   }
